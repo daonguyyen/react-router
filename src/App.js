@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Home from './components/Home';
 import About from './components/About';
 function App() {
@@ -12,10 +12,10 @@ function App() {
         {/* Menu */}
         <ul class="nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+          <Link to="/about">About</Link>
           </li>
         </ul>
         {/* Content */}
