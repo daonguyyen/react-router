@@ -37,4 +37,7 @@
   }
 }
 
-.active { color : red}
+/* .active { color : red} */
+.testClass {
+  background-color: #282c34;
+}
