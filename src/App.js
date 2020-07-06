@@ -1,33 +1,52 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Menu from './components/Menu';
+import routes from './routes';
+import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
-import Home from './components/Home';
-import Menu from './components/Menu';
 import NotFound from './components/NotFound';
 
 
 
+class App extends Component {
+  render() {
+    return (
+      <Router>
 
-function App() {
-  return (
-    <Router>
+        <div className="App">
 
-      <div className="App">
-
-        {/* Menu */}
-        <Menu/>
-        {/* Content */}
-        <Switch>
-          <Route exact path="/"><Home /></Route>
-          <Route path="/about"> <About /> </Route>
-          <Route path="/contact"><Contact /></Route>
-          <Route><NotFound/></Route>
-        </Switch>
-      </div>
-    </Router>
-  );
+          {/* Menu */}
+          <Menu />
+          {/* Content */}
+          <Switch>
+            {/* {this.showContentMenu(routes)} */}
+            <Route path='/' exact component={Home}/>
+            <Route path='/about' component={About}/>
+            <Route path='/contact' component={Contact}/>
+            <Route path='/' component={NotFound}/>
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
+  // showContentMenu =(routes) => {
+  //   var result = null;
+  //   if(routes.length > 0){
+  //     result = routes.map((route, index) =>{
+  //       return (
+  //         <Route
+  //           key = {index}
+  //           path = {route.path}
+  //           exact = {route.exact}
+  //           component = {route.main} 
+  //         />
+  //       )
+  //     });
+  //   }
+  //   return result;
+  // }
 }
 
 export default App;
