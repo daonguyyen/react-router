@@ -8,6 +8,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
 import Products from './components/Products';
+import Login from './components/Login';
 
 
 
@@ -27,6 +28,7 @@ class App extends Component {
             <Route path='/about' component={About}/>
             <Route path='/contact' component={Contact}/>
             <Route path='/products' component={Products}/>
+            <Route path='/login' component={Login}/>
             <Route path='/' component={NotFound}/>
           </Switch>
         </div>

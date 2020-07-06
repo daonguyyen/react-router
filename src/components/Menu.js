@@ -17,6 +17,11 @@ const menu = [
     exact: false
   },
   {
+    name : 'Login',
+    to: './login',
+    exact : false
+  },
+  {
     name : 'Product',
     to: './products',
     exact : false

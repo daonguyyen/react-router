@@ -38,6 +38,10 @@ class Products extends Component {
                 </NavLink>
             )
         })
+
+        var {location} = this.props;
+        console.log(location)
+
         return (
             <div>
                 <h1>Danh sach san pham</h1>
